@@ -1,0 +1,132 @@
+body {
+  height: 100vh;
+  background-image: linear-gradient(
+    to right top,
+    #d1ca6b,
+    #aace77,
+    #82ce8d,
+    #59cca6,
+    #2dc8be,
+    #24ccc2,
+    #18d1c5,
+    #00d5c9,
+    #4ae3b3,
+    #84ee95,
+    #bef476,
+    #fbf65f
+  );
+}
+
+h1 {
+  font-size: 43px;
+  margin-bottom: -45px;
+  margin-top: 10px;
+  font-weight: bold;
+  font-family: cursive;
+}
+
+.general {
+  display: grid;
+  justify-items: center;
+}
+
+.principal {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+  gap: 20px;
+  width: 800px;
+  height: 500px;
+  background-color: indigo;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  border-radius: 15px;
+  border: 8px solid black;
+}
+
+.contenedor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: yellow;
+  border-radius: 10%;
+  height: 120px;
+  width: 120px;
+  border: 5px solid white;
+}
+
+#boton {
+  margin-top: -50px;
+  height: 55px;
+  width: 500px;
+  background-image: linear-gradient(
+    to right,
+    #ad14c3,
+    #a910cc,
+    #a40dd6,
+    #9d0ee0,
+    #9412eb
+  );
+  color: yellow;
+  font-size: larger;
+  font-weight: bold;
+  border: 5px solid black;
+  border-radius: 15px;
+  transition: transform 0.1s ease-in-out;
+}
+
+#boton:active {
+  transform: scale(0.75);
+}
+
+img {
+  width: 80%;
+  height: auto;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+img.volteado {
+  transform: rotateY(180deg);
+  opacity: 0;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  margin-top: 10%;
+  padding: 20px;
+  z-index: 1;
+  font-size: 50px;
+  background-image: linear-gradient(
+    to right,
+    #ad14c3,
+    #a910cc,
+    #a40dd6,
+    #9d0ee0,
+    #9412eb
+  );
+  color: yellow;
+  font-weight: bold;
+  border: 5px solid black;
+  border-radius: 15px;
+}
+
+.popup-content {
+  text-align: center;
+}
+
+/* Animación de entrada del pop-up */
+.popup-enter {
+  animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
